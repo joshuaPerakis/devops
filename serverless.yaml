@@ -25,7 +25,7 @@ provider:
       - ${ssm:/${env:ENV}/private-subnet-1}
       - ${ssm:/${env:ENV}/private-subnet-2}
   environment:
-    DB_NAME: ${self:custom.secrets.${self:provider.stage}.db_name}
+    #DB_NAME: ${self:custom.secrets.${self:provider.stage}.db_name}
     DB_USER: ${self:custom.secrets.${self:provider.stage}.db_creds.username}
     DB_PASSWORD: ${self:custom.secrets.${self:provider.stage}.db_creds.password}
     DB_HOST: ${self:custom.secrets.${self:provider.stage}.db_host}
