@@ -14,7 +14,7 @@ provider:
   name: aws
   runtime: python3.7
   deploymentBucket:
-    name: ${ssm:/${env:ENV}/lambda-bucket}
+    name: ${ssm:/${env:ENV}/lambda-s3-bucket}
   role: ${ssm:/${env:ENV}/lambda-role-arn}
   stage:  ${opt:stage,'dev'}
   region: us-east-1
